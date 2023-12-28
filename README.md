@@ -5,7 +5,24 @@
 ```
 dmidecode --type memory
 ```
+---
+## proxmox hostname has no internet, guest vm, internet working
+#### misconfigured, try change to dhcp instead of static
+```
+vi /etc/network/interfaces
+// update
+auto vmbr0
+iface vmbr0 inet dhcp
+        bridge-ports enp2s0
+        bridge-stp off
+        bridge-fd 0
+// save quit
+systemctl restart networking
 
+```
+
+
+---
 ## RRDC RRD Time related:
 #### Error in journalctl
 ```
