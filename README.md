@@ -1,5 +1,11 @@
 # Proxmox Quick Fix
 
+## Useful tips
+#### Reading memory(ram) information
+```
+dmidecode --type memory
+```
+
 ## RRDC RRD Time related:
 #### Error in journalctl
 ```
