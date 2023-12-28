@@ -1,6 +1,7 @@
 # Proxmox Quick Fix
 
 ## RRDC RRD Time related:
+#### Error in journalctl
 ```
 [status] notice: RRDC update error
 [status] notice: RRD update error
@@ -12,9 +13,8 @@ systemctl start rrdcached
 systemctl restart pve-cluster
 ```
 
-
 ## Failed to start zfs import service during start up
-### Problem due to start up before hdd spin up
+#### Problem due to start up before hdd spin up
 ```
 Failed to start zfs-import@[pool name].service - Import ZFS pool [pool name].
 ---
