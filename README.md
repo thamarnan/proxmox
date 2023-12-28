@@ -6,8 +6,7 @@
 dmidecode --type memory
 ```
 ---
-## proxmox hostname has no internet, guest vm, internet working
-#### misconfigured, try change to dhcp instead of static
+#### proxmox hostname has no internet, guest vm, internet working; misconfigured, try change to dhcp instead of static
 ```
 vi /etc/network/interfaces
 // update
