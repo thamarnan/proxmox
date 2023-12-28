@@ -18,7 +18,12 @@ iface vmbr0 inet dhcp
         bridge-fd 0
 // save quit
 systemctl restart networking
-
+```
+#### Monitor ECC memory checking for error
+```
+apt install rasdaemon
+systemctl status rasdaemon
+ras-mc-ctl --error-count
 ```
 
 
