@@ -54,3 +54,16 @@ ExecStartPre=/usr/bin/sleep 15
 source:
 https://ounapuu.ee/posts/2021/02/01/how-to-fix-zfs-pool-not-importing-at-boot/
 ```
+
+## kernel: EDID block 0 is all zeroes Error message
+#### syslog flooded with EDID block 0 error
+```
+sudo -i
+# new file
+/etc/modprobe.d/igpu.conf
+# enter in the file
+blacklist i915
+# save quit restart
+```
+
+
