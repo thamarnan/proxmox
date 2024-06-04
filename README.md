@@ -66,4 +66,23 @@ blacklist i915
 # save quit restart
 ```
 
+## no network after update
+#### unable to access web ui or no network connection at all after apt update
+```
+login via console
+pveversion -v | grep "not correctly"
+some might show not correctly installed
+try
+dpkg --configure -a
+to auto resolve
+or
+installed individual from cache
+If there is a local cached version of the package (i.e. if ls -lah /var/cache/apt/archives/ifupdown2* returns a file), you can try re-installing that using apt install -f /var/cache/apt/archives/ifupdown[..].deb.
+then reboot
+
+source:
+https://forum.proxmox.com/threads/network-state-down-after-update-reboot.130708/
+```
+
+
 
