@@ -84,5 +84,16 @@ source:
 https://forum.proxmox.com/threads/network-state-down-after-update-reboot.130708/
 ```
 
+## banner on console show wrong ip
+#### ip change but banner show old or different ip
+```
+edit host file
+vi /etc/hosts
+
+edit banner
+/etc/issue
+
+```
+
 
 
