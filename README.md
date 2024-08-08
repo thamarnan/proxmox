@@ -18,6 +18,9 @@ iface vmbr0 inet dhcp
 // save quit
 systemctl restart networking
 ```
+
+---
+
 #### Monitor ECC memory checking for error
 ```
 apt install rasdaemon
@@ -27,8 +30,8 @@ ras-mc-ctl --error-count
 
 
 ---
-## RRDC RRD Time related:
-#### Error in journalctl
+#### RRDC RRD Time related:
+##### Error in journalctl
 ```
 [status] notice: RRDC update error
 [status] notice: RRD update error
@@ -39,9 +42,9 @@ mv rrdcached rrdcached.bck
 systemctl start rrdcached
 systemctl restart pve-cluster
 ```
-
-## Failed to start zfs import service during start up
-#### Problem due to start up before hdd spin up
+---
+#### Failed to start zfs import service during start up
+##### Problem due to start up before hdd spin up
 ```
 Failed to start zfs-import@[pool name].service - Import ZFS pool [pool name].
 ---
@@ -55,8 +58,8 @@ source:
 https://ounapuu.ee/posts/2021/02/01/how-to-fix-zfs-pool-not-importing-at-boot/
 ```
 
-## kernel: EDID block 0 is all zeroes Error message
-#### syslog flooded with EDID block 0 error
+#### kernel: EDID block 0 is all zeroes Error message
+##### syslog flooded with EDID block 0 error
 ```
 sudo -i
 # new file
@@ -66,8 +69,8 @@ blacklist i915
 # save quit restart
 ```
 
-## no network after update
-#### unable to access web ui or no network connection at all after apt update
+#### no network after update
+##### unable to access web ui or no network connection at all after apt update
 ```
 login via console
 pveversion -v | grep "not correctly"
@@ -84,8 +87,8 @@ source:
 https://forum.proxmox.com/threads/network-state-down-after-update-reboot.130708/
 ```
 
-## banner on console show wrong ip
-#### ip change but banner show old or different ip
+#### banner on console show wrong ip
+##### ip change but banner show old or different ip
 ```
 edit host file
 vi /etc/hosts
