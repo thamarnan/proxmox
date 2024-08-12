@@ -86,7 +86,7 @@ then reboot
 source:
 https://forum.proxmox.com/threads/network-state-down-after-update-reboot.130708/
 ```
-
+---
 #### banner on console show wrong ip
 ##### ip change but banner show old or different ip
 ```
@@ -97,6 +97,16 @@ edit banner
 /etc/issue
 
 ```
-
+---
+#### Check status active task from command
+```
+cd /var/log/pve/tasks
+cat active
+#see ending hex, eg, this is 4
+UPID:xprox:003052C4:0FC6E037:661DC404:qmstart:101:root@pam:
+cd 4
+ls -tlr
+cat UPID:xprox:003052C4:0FC6E037:661DC404:qmstart:101:root@pam:
+```
 
 
